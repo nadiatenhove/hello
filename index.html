@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="description" content="Creative Concept Developer based in Amsterdam. Specializing in art direction, visual storytelling, and brand strategy. Experienced with Adobe Creative Suite." />
+    <meta name="author" content="Nadia ten Hove" />
+    <meta name="theme-color" content="#800020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- OpenGraph Tags for Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nadia ten Hove - Creative Concept Developer" />
+    <meta property="og:description" content="Portfolio of Nadia ten Hove, Creative Concept Developer in Amsterdam specializing in art direction and visual storytelling." />
+    <meta property="og:image" content="profile-no-bg.png" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nadia ten Hove - Creative Concept Developer" />
+    <meta name="twitter:description" content="Creative Concept Developer based in Amsterdam specializing in art direction and visual storytelling." />
+    <meta name="twitter:image" content="profile-no-bg.png" />
+
+    <title>Nadia ten Hove - Creative Concept Developer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23800020'/><text x='50' y='65' font-size='50' font-weight='bold' fill='white' text-anchor='middle' font-family='serif'>N</text></svg>" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Skip link for keyboard navigation */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #800020;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 100;
+        border-radius: 0 0 4px 0;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #f5f0e8 0%, #fff 100%);
+        color: #000;
+        padding: 3rem;
+      }
+
+      .container {
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+
+      .hero-organic {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        padding: 4rem;
+        background-color: #fff;
+        position: relative;
+        overflow: visible;
+      }
+
+      .hero-organic::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background-color: #800020;
+        opacity: 0.05;
+        border-radius: 50% 20% / 30% 60%;
+        top: -100px;
+        right: -100px;
+        z-index: 0;
+      }
+
+      .hero-content {
+        flex: 1;
+        z-index: 1;
+      }
+
+      .hero-image-wrapper {
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .profile-organic {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        border: 8px solid #800020;
+        box-shadow: 0 15px 40px rgba(128, 0, 32, 0.3);
+        animation: morphing 8s ease-in-out infinite;
+      }
+
+      @keyframes morphing {
+        0%,
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        25% {
+          border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+        }
+        50% {
+          border-radius: 30% 70% 70% 30% / 40% 60% 40% 60%;
+        }
+        75% {
+          border-radius: 50% 50% 20% 80% / 50% 70% 30% 50%;
+        }
+      }
+
+      .name-organic {
+        font-family: "Playfair Display", serif;
+        font-size: 5rem;
+        font-weight: 900;
+        line-height: 0.9;
+        margin-bottom: 1rem;
+        letter-spacing: -2px;
+      }
+
+      .title-organic {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.8rem;
+        color: #800020;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .contact-organic {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-style: normal;
+      }
+
+      .contact-blob {
+        background-color: #000;
+        color: #fff;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .contact-blob:hover {
+        background-color: #800020;
+        border-color: #800020;
+        transform: scale(1.05);
+      }
+
+      .contact-blob:active {
+        transform: scale(0.98);
+      }
+
+      .contact-blob:focus-visible {
+        outline: 3px solid #800020;
+        outline-offset: 2px;
+        background-color: #800020;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .bento-item {
+        padding: 2.5rem;
+        border: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+      }
+
+      .bento-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .bento-item:focus-visible {
+        outline: 3px solid #800020;
+        outline-offset: 2px;
+      }
+
+      .bento-1 {
+        grid-column: span 2;
+        background-color: #800020;
+        color: #fff;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        padding: 4rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .bento-2 {
+        grid-column: span 4;
+        background-color: #fff;
+      }
+
+      .bento-3 {
+        grid-column: span 3;
+        background-color: #c0c0c0;
+        border-radius: 50% 20% / 30% 60%;
+        padding: 4rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .bento-4 {
+        grid-column: span 3;
+        background-color: #f5f0e8;
+        border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+        padding: 4rem 4rem 4rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .bento-5 {
+        grid-column: span 6;
+        background-color: #fff;
+      }
+
+      .bento-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+      }
+
+      .bento-3 .bento-title,
+      .bento-4 .bento-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .bento-3 p,
+      .bento-4 p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+      }
+
+      .bento-3 p:last-child,
+      .bento-4 p:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills-organic {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skills-organic li {
+        display: inline-flex;
+      }
+
+      .skill-bubble {
+        background-color: #000;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid #000;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .skill-bubble:hover {
+        background-color: #fff;
+        color: #000;
+        transform: scale(1.1);
+      }
+
+      .skill-bubble:focus-visible {
+        outline: 3px solid #800020;
+        outline-offset: 2px;
+      }
+
+      .skill-bubble.highlight {
+        background-color: #800020;
+        border-color: #800020;
+      }
+
+      .experience-organic {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .exp-card {
+        padding: 3rem 2.5rem;
+        background-color: #fff;
+        border: 2px solid #000;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 300px;
+      }
+
+      .exp-card:nth-child(1) {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        border-color: #800020;
+        border-width: 3px;
+        padding: 4rem 3.5rem 4rem 4.5rem;
+      }
+
+      .exp-card:nth-child(2) {
+        border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+        padding: 4rem 3.5rem;
+      }
+
+      .exp-card:nth-child(3) {
+        border-radius: 50% 20% / 30% 60%;
+        padding: 4rem 3.5rem;
+      }
+
+      .exp-card:hover {
+        background-color: #800020;
+        color: #fff;
+        border-color: #800020;
+      }
+
+      .exp-card:focus-visible {
+        outline: 3px solid #800020;
+        outline-offset: 2px;
+      }
+
+      .exp-year {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 900;
+        color: #800020;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .exp-card:hover .exp-year {
+        color: #fff;
+      }
+
+      .exp-role {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+      }
+
+      .exp-company {
+        font-style: italic;
+        opacity: 0.7;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+      }
+
+      .exp-card p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .decoration-shape {
+        position: fixed;
+        border: 2px solid rgba(128, 0, 32, 0.1);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .shape-1 {
+        width: 300px;
+        height: 300px;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        top: 10%;
+        right: 5%;
+        animation: float-shape 10s ease-in-out infinite;
+      }
+
+      .shape-2 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50% 20% / 30% 60%;
+        bottom: 10%;
+        left: 5%;
+        animation: float-shape 8s ease-in-out infinite reverse;
+      }
+
+      @keyframes float-shape {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        50% {
+          transform: translate(20px, 20px) rotate(180deg);
+        }
+      }
+
+      /* Respect user's motion preferences */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .profile-organic {
+          animation: none;
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .shape-1,
+        .shape-2 {
+          animation: none;
+        }
+      }
+
+      /* Disable hover transforms on touch devices */
+      @media (hover: none) and (pointer: coarse) {
+        .contact-blob:hover,
+        .skill-bubble:hover,
+        .bento-item:hover,
+        .exp-card:hover {
+          transform: none;
+        }
+      }
+
+      /* Print Styles - Browser Native Print (Cmd+P / Ctrl+P) */
+      @media print {
+        /* Force color printing */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          color-adjust: exact !important;
+        }
+
+        /* Hide decorations */
+        .decoration-shape {
+          display: none !important;
+        }
+
+        /* Reset body */
+        body {
+          padding: 0;
+          margin: 0;
+          background: white;
+        }
+
+        /* Container adjustments */
+        .container {
+          max-width: 100%;
+          padding: 1.5rem;
+        }
+
+        /* Hero section */
+        .hero-organic {
+          padding: 2rem;
+          margin-bottom: 2rem;
+          gap: 2rem;
+          page-break-after: avoid;
+          page-break-inside: avoid;
+        }
+
+        .hero-organic::before {
+          display: none;
+        }
+
+        .profile-organic {
+          width: 220px;
+          height: 220px;
+          animation: none;
+        }
+
+        .name-organic {
+          font-size: 3rem;
+          line-height: 0.9;
+        }
+
+        .title-organic {
+          font-size: 1.3rem;
+        }
+
+        .contact-blob {
+          font-size: 0.75rem;
+          padding: 0.7rem 1.2rem;
+        }
+
+        /* Bento grid */
+        .bento-grid {
+          gap: 3rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .bento-item {
+          padding: 1.8rem;
+          page-break-inside: avoid;
+        }
+
+        /* Page break before Opleiding section */
+        .bento-3 {
+          padding: 3rem 3.5rem 3rem 14rem;
+        }
+
+        .bento-1 {
+          padding: 2.5rem 3.5rem;
+        }
+
+        .bento-4 {
+          padding: 3rem 3rem 3rem 14rem;
+        }
+
+        .bento-title {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+
+        .bento-3 .bento-title,
+        .bento-4 .bento-title {
+          font-size: 1.1rem;
+        }
+
+        .bento-3 p,
+        .bento-4 p {
+          font-size: 0.75rem;
+          line-height: 1.5;
+        }
+
+        .skill-bubble {
+          font-size: 0.75rem;
+          padding: 0.6rem 1.2rem;
+        }
+
+        /* Force page break before Experience section */
+        .bento-5 {
+          page-break-before: always;
+          padding-top: 2rem;
+        }
+
+        /* Experience cards */
+        .experience-organic {
+          gap: 1.2rem;
+        }
+
+        .exp-card {
+          padding: 2.5rem;
+          min-height: auto;
+          page-break-inside: avoid;
+        }
+
+        .exp-card:nth-child(1) {
+          padding: 2.5rem 3rem 2.5rem 12rem;
+        }
+
+        .exp-card:nth-child(2),
+        .exp-card:nth-child(3) {
+          padding: 2.5rem 3rem 2.5rem 12rem;
+        }
+
+        .exp-year {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .exp-role {
+          font-size: 1.05rem;
+          line-height: 1.2;
+          margin-bottom: 0.4rem;
+        }
+
+        .exp-company {
+          font-size: 0.75rem;
+          margin-bottom: 0.7rem;
+        }
+
+        .exp-card p {
+          font-size: 0.8rem;
+          line-height: 1.55;
+        }
+      }
+
+      /* Tablet optimization (768px) */
+      @media (max-width: 768px) {
+        body {
+          padding: 1.5rem;
+        }
+
+        .hero-organic {
+          padding: 2rem;
+          gap: 2rem;
+        }
+
+        .name-organic {
+          font-size: 2.5rem;
+        }
+
+        .title-organic {
+          font-size: 1.3rem;
+        }
+
+        .contact-organic {
+          gap: 0.75rem;
+        }
+
+        .contact-blob {
+          padding: 0.65rem 1.2rem;
+          font-size: 0.75rem;
+        }
+
+        .profile-organic {
+          width: 280px;
+          height: 280px;
+        }
+
+        .bento-grid {
+          gap: 1.5rem;
+        }
+
+        .experience-organic {
+          gap: 1.5rem;
+        }
+      }
+
+      /* Mobile optimization (480px) */
+      @media (max-width: 480px) {
+        body {
+          padding: 1rem;
+        }
+
+        .hero-organic {
+          padding: 1.5rem;
+          gap: 1.5rem;
+        }
+
+        .name-organic {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .title-organic {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .contact-blob {
+          padding: 0.6rem 1rem;
+          font-size: 0.7rem;
+        }
+
+        .profile-organic {
+          width: 220px;
+          height: 220px;
+        }
+      }
+
+      /* Landscape mobile optimization */
+      @media (max-height: 600px) and (orientation: landscape) {
+        .hero-organic {
+          gap: 2rem;
+          padding: 2rem;
+        }
+
+        .name-organic {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .hero-organic {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .bento-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .bento-1,
+        .bento-2,
+        .bento-3,
+        .bento-4,
+        .bento-5 {
+          grid-column: span 1;
+        }
+
+        .experience-organic {
+          grid-template-columns: 1fr;
+        }
+
+        .name-organic {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Decorative Shapes -->
+    <div class="decoration-shape shape-1"></div>
+    <div class="decoration-shape shape-2"></div>
+
+    <div class="container" id="main-content">
+      <!-- Hero Section -->
+      <div class="hero-organic">
+        <div class="hero-content">
+          <h1 class="name-organic">NADIA<br />TEN HOVE</h1>
+          <h2 class="title-organic">Creative Concept Developer</h2>
+          <address class="contact-organic">
+            <a href="mailto:nadia.tenhove@yahoo.com" class="contact-blob" aria-label="Send email to Nadia ten Hove">nadia.tenhove@yahoo.com</a>
+            <a href="tel:+31615822402" class="contact-blob" aria-label="Call Nadia at +31 6 15822402">+31 6 15822402</a>
+            <a href="https://instagram.com/helllbunny" class="contact-blob" target="_blank" rel="noopener noreferrer" aria-label="Visit Nadia's Instagram profile">@helllbunny</a>
+            <span class="contact-blob" aria-label="Location: Amsterdam, Netherlands">Amsterdam, NL</span>
+          </address>
+        </div>
+        <div class="hero-image-wrapper">
+          <img
+            src="profile-no-bg.png"
+            alt="Nadia ten Hove, Creative Concept Developer"
+            class="profile-organic"
+            loading="lazy"
+            decoding="async"
+            width="350"
+            height="350"
+          />
+        </div>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="bento-grid">
+        <!-- Skills -->
+        <div class="bento-item bento-1">
+          <h2 class="bento-title">Kern-<br />competenties</h2>
+        </div>
+        <div class="bento-item bento-2">
+          <ul class="skills-organic" role="list">
+            <li><span class="skill-bubble">Concept</span></li>
+            <li><span class="skill-bubble">Art Direction</span></li>
+            <li><span class="skill-bubble">Styling</span></li>
+            <li><span class="skill-bubble">Visual Storytelling</span></li>
+            <li><span class="skill-bubble">PR / Media</span></li>
+            <li><span class="skill-bubble">Branding</span></li>
+            <li><span class="skill-bubble">Content Creatie</span></li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="bento-item bento-3">
+          <h2 class="bento-title">Opleiding</h2>
+          <p style="font-weight: 700; margin-bottom: 0.5rem">
+            Bachelor Creative Concept Developer
+          </p>
+          <p style="opacity: 0.7; font-style: italic; margin-bottom: 1.5rem">
+            Academie Artemis, 2020 – 2024
+          </p>
+          <p style="font-weight: 700; margin-bottom: 0.5rem">
+            Mbo Grime & Haarstyling
+          </p>
+          <p style="opacity: 0.7; font-style: italic">
+            Rijn IJssel College, 2016 – 2020
+          </p>
+        </div>
+
+        <!-- Tools -->
+        <div class="bento-item bento-4">
+          <h2 class="bento-title">Tools & Talen</h2>
+          <p style="font-weight: 700; margin-bottom: 0.5rem">
+            Adobe Creative Suite
+          </p>
+          <p style="opacity: 0.7; margin-bottom: 1.5rem">
+            InDesign, Photoshop, Illustrator, Lightroom
+          </p>
+          <p style="font-weight: 700; margin-bottom: 0.5rem">Talen</p>
+          <p style="opacity: 0.7; margin-bottom: 1.5rem">
+            Nederlands, Engels, Duits (Vloeiend)
+          </p>
+          <p style="font-weight: 700">40+ Creatieve Projecten</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="bento-item bento-5">
+          <h2
+            class="bento-title"
+            style="margin-bottom: 2rem"
+          >
+            Ervaring
+          </h2>
+          <div class="experience-organic">
+            <article class="exp-card">
+              <time datetime="2025" class="exp-year">2025 – Heden</time>
+              <h3 class="exp-role">Sales & Brand Assistant</h3>
+              <div class="exp-company">
+                XBank, Amsterdam<br />(High-end Fashion & Art)
+              </div>
+              <p style="font-size: 0.9rem; line-height: 1.6">
+                Ondersteuning van dagelijkse activiteiten en beheer van high-end
+                fashion en art. Visual merchandising en styling.
+              </p>
+            </article>
+            <article class="exp-card">
+              <time datetime="2023" class="exp-year">2023 – 2024</time>
+              <h3 class="exp-role">Creative & PR Assistant</h3>
+              <div class="exp-company">
+                Numéro Magazine Netherlands, Amsterdam
+              </div>
+              <p style="font-size: 0.9rem; line-height: 1.6">
+                Assistentie bij fotoshoots, events en redactionele producties.
+                Influencer- en merksamenwerkingen.
+              </p>
+            </article>
+            <article class="exp-card">
+              <time datetime="2021" class="exp-year">2021 – 2023</time>
+              <h3 class="exp-role">Freelance Creative Projects</h3>
+              <div class="exp-company">Amsterdam / Berlijn / Parijs</div>
+              <p style="font-size: 0.9rem; line-height: 1.6">
+                Samenwerkingen met ontwerpers en magazines aan creative
+                direction en branding. Social content productie.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
